@@ -45,7 +45,7 @@ Download it from here: https://docs.mongodb.com/manual/administration/install-co
 
 ```
 $ npm install
-$ npm start
+$ nodemon app.js
 ```
 
 ### 4. Create Admin User
