@@ -256,7 +256,7 @@ app.get("/users/new", function(req, res) {
         console.log(error);
       } else {
         if (user.voterID) {
-          console.log("You have already given your voter ID");
+          console.log("You have already given the voter ID");
           res.redirect("/voting");
         }
         res.redirect("/users/" + req.user._id + "/new");
