@@ -14,4 +14,4 @@ This Online Voting system will manage the Voter’s information by which voter c
 Online Voting System is an online voting technique. It is based on the other online services like Online Reservation System .In this system people who have citizenship of India and whose age is above 18 years of any sex can give his\her vote online without going to any polling booth. There is a Database which is maintained by the ELECTION COMMISION OF INDIA in which all the names of voter with complete information is stored. The Proposed System has the voting system and the counting procedure computerized. The system has ability to perform the voting procedure in less time, reduces the error possibility and the will not accept the invalid votes.
 
 ## Screenshots
-![Image of Login Page](https://github.com/mohitwildbeast/Driver-Drowsiness-Detector/blob/master/images/webcam_face_eye_detect.jpeg)
+![Image of Login Page]()
