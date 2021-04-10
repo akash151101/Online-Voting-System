@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vote Page</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/master.css"> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+<link rel="stylesheet" href="css/votePageStyle.css">
+
+  <!-- <style>
+    body {
+      padding: 80px;
+    }
+
+    .form-control {
+      width: 20%;
+    }
+
+    .registerVoterID {
+      margin-top: 30px;
+    }
+  </style> -->
+
+</head>
+
+<body>
+
+
+
+  <div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+
+    <div class="fadeIn first">
+      <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
+    </div>
+
+    <!-- Login Form -->
+    <form action="/checksUser" method="POST">
+      <input type="email" id="login" class="fadeIn second" name="email" placeholder="Enter email">
+      <input type="text" id="password" class="fadeIn third" name="voterID" placeholder="Enter voter ID" autocomplete="off">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your Voter ID with anyone else.</small>
+      <button type="submit" class="fadeIn fourth buttonStyle" name="Voter" value="<%= VoterID %>">Submit</button>
+
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter" class="form-group">
+      <a  href="/users/new" data-toggle="tooltip" data-placement="top" title="If You Don't Have a Voter ID">Voter ID</a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+  <!-- <form action="/checksUser" method="POST">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Voter ID</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" name="voterID" placeholder="Enter voter ID" autocomplete="off">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your Voter ID with anyone else.</small>
+    </div>
+    <button type="submit" class="btn btn-primary" name="Voter" value="<%= VoterID %>">Submit</button>
+  </form> -->
+
+
+  <!-- <div class="form-group registerVoterID">
+    <button type="button" onclick="window.location.href='/users/new'" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="If You Don't Have a Voter ID">
+      Voter ID
+    </button>
+    <a href="/users/new" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="If You Don't Have a Voter ID">Voter ID</a>
+  </div> -->
+
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

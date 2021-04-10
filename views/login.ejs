@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Login Page</title>
+ <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Business Login Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+    <!-- //Meta-Tags -->
+
+	<!-- css files -->
+
+	<link href="css/font-awesome.min.css" rel="stylesheet" >
+	<link href="css/loginStyle.css" rel="stylesheet"/>
+
+	<!-- //css files -->
+
+	<!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&display=swap" rel="stylesheet">
+	<!-- //google fonts -->
+
+  <script src="https://use.fontawesome.com/16f4f12265.js"></script>
+
+</head>
+<body>
+
+<div class="signupform">
+	<div class="container">
+		<!-- main content -->
+		<div class="agile_info" style="width: 800px;">
+			<div class="w3l_form" style="margin-right: 30px;left: -20;right: 80px;">
+				<div class="left_grid_info">
+					<h1>Manage Your Business Account</h1>
+					<p>Login With Your Google Or Facebook Account. Your Passwords Won't Be Shared With Anyone.</p>
+					<!-- <img src="images/loginImages/image.jpg" alt="" /> -->
+          <div class="col">
+            <a href="/auth/facebook" class="fb btn">
+              <i class="fa fa-facebook fa-fw"></i> SignIn with Facebook
+            </a>
+            <a href="/auth/google" class="google btn"><i class="fa fa-google fa-fw">
+            </i> SignIn with Google
+            </a>
+          </div>
+				</div>
+        <!-- <div class="col">
+          <a href="/auth/facebook" class="fb btn">
+            <i class="fa fa-facebook fa-fw"></i> SignUp with Facebook
+          </a>
+          <a href="/auth/google" class="google btn"><i class="fa fa-google fa-fw">
+          </i> SignUp with Google
+          </a>
+        </div> -->
+			</div>
+			<div class="w3_info" style="padding-right: 15px;">
+				<h2>Login to your Account</h2>
+				<p>Enter your details to login.</p>
+				<form action="/login" method="post">
+					<label>Email Address</label>
+					<div class="input-group">
+						<span class="fa fa-envelope" aria-hidden="true"></span>
+						<input type="email" name="username" placeholder="Enter Your email" required="" autocomplete="off">
+					</div>
+					<label>Password</label>
+					<div class="input-group">
+						<span class="fa fa-lock" aria-hidden="true" style = "font-size: 20px"></span>
+						<input type="password" name="password" placeholder="Enter Password" required="" autocomplete="off">
+					</div>
+					<div class="login-check">
+						 <label class="checkbox"><input type="checkbox" name="checkbox"> Remember me</label>
+					</div>
+						<button class="btn btn-danger btn-block" type="submit">Login</button >
+				</form>
+				<p class="account">If you are a Admin <a href="/adminLogin">Login Here</a></p>
+				<p class="account1">Dont have an account? <a href="/register">Register here</a></p>
+			</div>
+		</div>
+		<!-- //main content -->
+	</div>
+
+</div>
+
+<!-- <script>
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+</script> -->
+
+</body>
+</html>

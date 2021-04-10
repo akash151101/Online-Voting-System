@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Edit Voting Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4"><%= listHeading %></h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name Of The Party</th>
+        <th scope="col">Leader Name</th>
+        <th scope="col">Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+      <%  listInput.forEach(function(item){ %>
+      <tr>
+
+        <th scope="row">
+        <%  if(item.image){ %>
+          <img src="uploads/<%= item.image %>" alt="Candidate Image" style="width: 100px; height: 75px;">
+        <% } %>
+        </th>
+        <td><%= item.name %></td>
+        <td><%= item.leader %></td>
+        <td>
+          <button type="button" class="btn btn-primary" id="<%= item.name %>Btn" data-toggle="modal" data-target="#<%= item.name %>ModalCenter" name="<%= item.name %>">
+            DELETE
+          </button>
+          <button type="button" class="btn btn-primary" id="<%= item.name %>Btn" name="candidateID" value="<%= item._id %>" onclick="window.location.href='/updateCandidate/<%= item._id %>'">UPDATE</button>
+        </td>
+      </tr>
+      <% }) %>
+
+
+    </tbody>
+  </table>
+
+  <% listInput.forEach(function(item){ %>
+  <div class="modal fade" id="<%= item.name %>ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="<%= item.name %>ModalLongTitle"><%= item.name %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>"Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <form action="/deleteCandidate" method="post">
+            <button type="submit" class="btn btn-primary" name="candidateName" value="<%= item.name %>">Confirm</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <% })  %>
+
+
+  <div class="form-group" style="margin: 25px 15px;">
+    <a class="btn btn-info btn-lg" href="/adminPage">Return To Home</a>
+  </div>
+
+
+
+  <!-- <script>
+
+   function myFunction(){
+
+   }
+    var button = document.getElementById("myBtn");
+    var input = document.getElementById("inputValue");
+    const attributeValue;
+    button.addEventListener("click", function() {
+      attributeValue = button.getAttribute("name");
+      input.setAttribute("value", attributeValue);
+    });
+  </script> -->
+
+
+</body>
+
+</html>

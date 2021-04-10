@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Page</title>
+
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/adminLoginStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="main">
+
+      <section class="signup">
+        <!-- <img src="images/signup-bg.jpg" alt=""> -->
+        <div class="container">
+          <div class="signup-content">
+            <form action="/adminPage" method="post" id="signup-form" class="signup-form">
+              <h2 class="form-title">Sign In</h2>
+              <div class="form-group">
+                <input type="email" class="form-input" name="username" id="email" placeholder="Your Email" autocomplete="off" />
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-input" name="password" id="password" placeholder="Password" autocomplete="off" />
+                <span toggle="#password" class="zmdi zmdi-eye-off field-icon toggle-password"></span>
+              </div>
+              <div class="form-group">
+                <button type="submit" name="button" id="submit" class="form-submit">Login</button>
+              </div>
+            </form>
+
+            <p class="loginhere">
+              If You Are A User ? <a href="/login" class="loginhere-link">Login here</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <script>
+      const eye = document.querySelector(".toggle-password");
+      eye.addEventListener("click", function() {
+        eye.classList.toggle("zmdi-eye-off");
+        eye.classList.toggle("zmdi-eye");
+        var input = document.querySelector(eye.getAttribute("toggle"));
+        if (input.getAttribute("type") == "password") {
+          input.setAttribute("type", "text");
+        } else {
+          input.setAttribute("type", "password");
+        }
+      });
+    </script>
+  </body>
+</html>

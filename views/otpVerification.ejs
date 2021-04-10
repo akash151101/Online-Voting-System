@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>OTP verification</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
+  <!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/> -->
+
+  <style>
+    body {
+      padding: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      /* filter: blur(8px);
+     -webkit-filter: blur(8px); */
+    }
+
+    .form-control {
+      width: 90%;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      border-bottom: 1px solid black;
+      text-decoration: underline;
+      margin: 10px auto 15px;
+    }
+
+    .form-control:active {
+      border: 0;
+      outline: 0;
+      background: transparent;
+      border-style: none;
+    }
+    .bg-Blur{
+
+      /* width: 80%;
+      filter: blur(8px);
+     -webkit-filter: blur(8px); */
+    }
+    .card{
+      border-radius: 25px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      /* position: fixed;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999; */
+
+    }
+
+    .headDiv {
+      font-weight: bold;
+      color: #515b68;
+      text-align: center;
+      margin: 30px 0 0;
+    }
+
+    .otpImage {
+      width: 120px;
+      margin: 30px auto 10px;
+    }
+    .card-body{
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-title {
+      font-size: 15px;
+      color: #57616e;
+      margin: 0 auto 15px;
+      text-align: center;
+    }
+
+    .card-text {
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0 auto 15px;
+      color: #bbbec2;
+      text-align: center;
+    }
+
+    .otpInput {
+      text-align: center;
+    }
+
+    .input-field {
+      margin: 0 auto 10px;
+    }
+
+    .btnStyle {
+      border: none;
+      color: #ffffff;
+      padding: 5px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px auto;
+      cursor: pointer;
+      border-radius: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- <div class="bg-Blur"></div> -->
+
+
+
+  <div class="card" style="width: 25rem;">
+    <div class="headDiv">
+      <p>OTP Verification</p>
+    </div>
+    <img class="card-img-top otpImage" src="/images/profile.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size:16px;font-weight:bold;">Enter your phone number <br> associated with your account</h5>
+      <p class="card-text">We message you a otp to register <br> your voter ID</p>
+      <div class="row">
+        <form class="col s12" action="/users" method="post">
+          <div class="row">
+            <div class="input-field col s6">
+              <!-- <i class="fa fa-phone" aria-hidden="true"></i> -->
+              <input id="icon_telephone" type="tel" class="validate otpInput" name="phoneNumber" placeholder="Enter your number" autocomplete="off">
+              <!-- <label for="icon_telephone">Telephone</label> -->
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btnStyle" name="userID" value="<%= Id %>">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <form action="/users" method="post">
+    <div class="form-group">
+      <label for="number">Phone Number:</label>
+      <input type="number" class="form-control" id="number" autocomplete="off" name="phoneNumber">
+    </div>
+    <button type="submit" class="btn btn-default" name="userID" value="<%= Id %>">Submit</button>
+  </form> -->
+
+  <!-- <form  action="/users" method="post">
+
+      <input type="number" name="phoneNumber" >
+      <button type="submit" name="userID" value = "<%= Id %>">Submit</button>
+
+    </form> -->
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!-- <div class="footer-padding"></div>
+  <div class="footer">
+    <hr>
+    <p>Made with ❤️ by Akash</p>
+  </div> -->
+</div>
+
+
+<script>
+
+  // AOS.init();
+
+  $(document).ready(function() {
+
+    $(window).scroll(function() {
+
+        var height = $('.first-container').height();
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop >= height-600) {
+            $('.nav-container').addClass('solid-nav');
+            $('.scrollDesign').addClass('scrolledDesign')
+        } else {
+            $('.nav-container').removeClass('solid-nav');
+            $('.scrollDesign').removeClass('scrolledDesign')
+        }
+
+    });
+});
+
+// AOS.init({
+// offset: 150,
+// duration: 800,
+// easing: "ease-in-out",
+// });
+
+</script>
+
+</body>
+</html>

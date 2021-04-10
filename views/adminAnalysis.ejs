@@ -1,0 +1,156 @@
+<%- include("partials/adminheader"); -%>
+
+<div class="counter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="employees">
+                    <p class="counter-count"><%= listInput.length-1 %></p>
+                    <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+                    <p class="employee-p">Voters</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="customer">
+                    <p class="counter-count"><%= userVoted %></p>
+                    <i class="fa fa-street-view fa-3x" aria-hidden="true"></i>
+                    <p class="customer-p">Voted Number</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="design">
+                    <p class="counter-count"><%= userWithID %></p>
+                    <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>
+                    <p class="design-p">Registered Voter ID</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="order">
+                    <p class="counter-count"><%= userVerified %></p>
+                    <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+                    <p class="order-p">Verified Voter</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="chartDiv">
+  <div class="chartSubDiv">
+    <div id="chartContainer" class="splineChart"></div>
+
+  </div>
+  <hr>
+  <div class="bottomDiv">
+    <div class="bottomSubDiv">
+        <p class="bottomSubDivPara">$6,308</p>
+        <p>Total orders of this year</p>
+    </div>
+    <span class="vertical-line"></span>
+    <div class="bottomSubDiv">
+      <p class="bottomSubDivPara">$73,308</p>
+      <p>Total revenue of this year</p>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="card cardDiv">
+  <div class="card-header headerDiv">
+    <div class="donoutChart" id="chartdiv" style="width: 48rem; height: 30rem;"></div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">VOTER ANALYSIS</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+
+
+</div>
+
+<div class="VotersDiv">
+  <h2 class="VotersList">Voter's List</h2>
+  <table class="table table-borderless">
+  <thead>
+    <tr class="tableHead">
+      <th scope="col">VoterID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <%  listInput.forEach(function(item){ %>
+
+    <% if(!item.admin){%>
+
+      <tr class="tableBody">
+        <th scope="row">#</th>
+        <td class="voterName"><%  if(item.name){%>
+            <%= item.name %>
+        <%}%></td>
+        <td><%  if(item.username){%>
+            <%= item.username %>
+        <%}%></td>
+        <td><%  if(item.phone){%>
+            <%= item.phone %>
+        <%}%></td>
+        <td>
+        <%  if(item.isVoted){ %>
+            Voted
+        <%  }else{ %>
+            Not Voted
+        <%}%>
+        </td>
+        <td><i class="fa fa-ellipsis-v" aria-hidden="true"></i></td>
+      </tr>
+
+    <%  }%>
+  <%  }); %>
+
+
+
+
+    <tr class="tableBody">
+      <th scope="row">#</th>
+      <td class="voterName">Mark</td>
+      <td>Mark@gmail.com</td>
+      <td>7834658124</td>
+      <td>Not Voted</td>
+      <td><i class="fa fa-ellipsis-v" aria-hidden="true"></i></td>
+    </tr>
+    
+
+  </tbody>
+</table>
+
+</div>
+
+
+
+
+<!-- <div class="card" style="width: 38rem; height: 25rem;">
+  <div class="card-img-top" id="chartdiv" style="width: 48rem; height: 30rem;"></div>
+
+
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+<%- include("partials/adminfooter"); -%>

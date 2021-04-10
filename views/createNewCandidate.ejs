@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>New Candidate Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <style>
+    body {
+      padding: 60px;
+      mrgin: 0;
+    }
+
+    .form-control {
+      width: 20%;
+    }
+  </style>
+</head>
+
+<body> -->
+
+<%- include("partials/adminheader"); -%>
+
+
+
+  <form action="/createNewCandidate" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="InputName">Name</label>
+      <input type="text" class="form-control" id="InputName" name="candidateName" placeholder="Enter Party Name">
+    </div>
+    <div class="form-group">
+      <label for="InputLeader">Leader</label>
+      <input type="text" class="form-control" id="InputLeader" name="candidateLeader" placeholder="Enter Leader Name">
+    </div>
+    <div class="form-group">
+      <label for="InputPresident">President</label>
+      <input type="text" class="form-control" id="InputPresident" name="candidatePresident" placeholder="Enter President Name">
+    </div>
+    <div class="form-group">
+      <label for="InputCandidateID">Candidate ID</label>
+      <input type="text" class="form-control" id="InputCandidateID" name="candidateID" placeholder="Enter candidate ID">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">File input</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
+    </div>
+
+    <button type="submit" class="btn btn-primary">CREATE</button>
+  </form>
+
+  <%- include("partials/adminfooter"); -%>
+
+
+<!--
+</body>
+
+</html> -->

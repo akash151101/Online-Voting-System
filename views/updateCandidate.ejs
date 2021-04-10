@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Edit Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <style>
+    body {
+      padding: 60px;
+      mrgin: 0;
+    }
+
+    .form-control {
+      width: 20%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form action="/updatedCandidate" method="POST">
+    <div class="form-group">
+      <label for="InputName">Name</label>
+      <input type="text" class="form-control" id="InputName" name="candidateName" value="<%= candidateInfo.name %>">
+    </div>
+    <div class="form-group">
+      <label for="InputLeader">Leader</label>
+      <input type="text" class="form-control" id="InputLeader" name="candidateLeader" value="<%= candidateInfo.leader %>">
+    </div>
+    <div class="form-group">
+      <label for="InputPresident">President</label>
+      <input type="text" class="form-control" id="InputPresident" name="candidatePresident" value="<%= candidateInfo.president %>">
+    </div>
+    <div class="form-group">
+      <label for="InputCandidateID">Candidate ID</label>
+      <input type="text" class="form-control" id="InputCandidateID" name="candidateID" value="<%= candidateInfo.candidateId %>">
+    </div>
+
+    <button type="submit" class="btn btn-primary" name="candidateUniqueID" value="<%= candidateInfo._id %>">UPDATE</button>
+  </form>
+
+</body>
+
+</html>

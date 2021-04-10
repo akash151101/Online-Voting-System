@@ -1,0 +1,27 @@
+<%- include("partials/adminheader"); -%>
+
+
+<div class="container">
+  <div class="row">
+  <%  candidateList.forEach(function(candidate){ %>
+      <div class="col-lg-3 col-md-6">
+        <div class="card resultDiv" style="width: 18rem;">
+          <img class="card-img-top" src="uploads/<%=candidate.image%>" alt="Candidate Images" style="width: 100px; height: 75px;">
+          <div class="card-body">
+            <p class="card-text"><span style="color: #000; font-weight: bold; margin-right: 5px;">Party Name:</span> <%=candidate.name%></p>
+            <p class="card-text"><span style="color: #000; font-weight: bold; margin-right: 5px;">Vote Count:</span> <%=candidate.voteCount%></p>
+          </div>
+        </div>
+      </div>
+  <%  }) %>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<%- include("partials/adminfooter"); -%>
