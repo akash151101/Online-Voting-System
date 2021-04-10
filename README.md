@@ -55,7 +55,7 @@ $ npm start
 - email: test@gmail.com
 - password: test
 
-### 6. Login
+### 5. Login
 
 - Run http://localhost:3000/login
 - Enter admin email and password and click signin
